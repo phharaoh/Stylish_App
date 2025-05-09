@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'features/Auth/views/Splash/splash_view.dart';
+import 'package:stylish_app/core/app_route.dart';
+import 'package:stylish_app/core/styles/colors.dart';
+import 'package:stylish_app/features/Auth/views/Splash/getstarted_view.dart';
+import 'package:stylish_app/features/Auth/views/Splash/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: AppRoute().generateRoute,
       theme: ThemeData(
         fontFamily: 'Montserrat',
-        scaffoldBackgroundColor: Colors.white,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
         useMaterial3: true,
       ),
-      home: const SplashView(),
     );
   }
 }

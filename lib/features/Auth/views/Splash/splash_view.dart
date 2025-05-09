@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:stylish_app/features/Auth/views/Splash/onboarding.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends StatefulWidget {
   const SplashView({super.key});
-  // void initState() {
-  //   super.initState();
-  //   Future.delayed(const Duration(seconds: 3), () {
-  //     Navigator.of(context).pushReplacement(MaterialPageRoute(
-  //       builder: (context) => const GetstartView(),
-  //     ));
-  //   });
-  // }
+
+  @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+      getOnboarding();
+    super.initState();
+  
+  }
+
+  getOnboarding() {
+    Future.delayed(const Duration(seconds: 5), () {
+      // ignore: use_build_context_synchronously
+      Navigator.pushReplacementNamed(context,'/onborading');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
