@@ -73,6 +73,7 @@ class _OnboardingState extends State<Onboarding> {
                 )
                     : OnboardingMoveText(
                   text: "        Prev",
+                  prev: true,
                   onPressed: _jumgToPrevPage,
                 )),
             Container(
