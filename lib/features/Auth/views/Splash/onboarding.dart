@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:stylish_app/core/styles/colors.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:stylish_app/features/Auth/data/Splash_Data_Model/onboarding_data_model.dart';
 import 'package:stylish_app/features/Auth/views/Splash/OnBoarding_Widgets/onboarding_body.dart';
 import 'package:stylish_app/features/Auth/views/Splash/OnBoarding_Widgets/onboarding_move_text.dart';
@@ -66,33 +66,27 @@ class _OnboardingState extends State<Onboarding> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
-                width: 125,
                 child: currentPage == 0
-                    ?const OnboardingMoveText(
-                  text: " ",
-                )
+                    ? const OnboardingMoveText(
+                        text: "            ",
+                      )
                     : OnboardingMoveText(
-                  text: "        Prev",
-                  prev: true,
-                  onPressed: _jumgToPrevPage,
-                )),
-            Container(
-              width: 125,
-              margin: const EdgeInsets.only(left: 30),
-              child: SmoothPageIndicator(
-                controller: _controller,
-                count: onboardingDataList.length,
-                effect: const WormEffect(
-                  dotHeight: 16,
-                  dotWidth: 16,
-                  dotColor: Color(0x17223B33),
-                  activeDotColor: Color(0xff17223B),
-                  type: WormType.thin,
-                ),
+                        text: "        Prev",
+                        prev: true,
+                        onPressed: _jumgToPrevPage,
+                      )),
+            SmoothPageIndicator(
+              controller: _controller,
+              count: onboardingDataList.length,
+              effect: const WormEffect(
+                dotHeight: 16,
+                dotWidth: 16,
+                dotColor: Color(0x17223B33),
+                activeDotColor: Color(0xff17223B),
+                type: WormType.thin,
               ),
             ),
             SizedBox(
-                width: 125,
                 child: 2 != currentPage
                     ? OnboardingMoveText(
                         text: "     Next     ",

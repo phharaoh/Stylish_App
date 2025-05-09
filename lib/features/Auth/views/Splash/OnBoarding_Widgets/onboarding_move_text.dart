@@ -1,7 +1,6 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, use_super_parameters
 import 'package:flutter/material.dart';
-
 import '../../../../../core/styles/colors.dart';
+
 
 class OnboardingMoveText extends StatefulWidget {
   const OnboardingMoveText({

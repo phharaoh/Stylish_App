@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:stylish_app/features/Auth/views/Splash/onboarding.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
