@@ -66,6 +66,7 @@ class _OnboardingState extends State<Onboarding> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
+              width: MediaQuery.of(context).size.width * 0.29,
                 child: currentPage == 0
                     ? const OnboardingMoveText(
                         text: "            ",
@@ -87,6 +88,7 @@ class _OnboardingState extends State<Onboarding> {
               ),
             ),
             SizedBox(
+                width: MediaQuery.of(context).size.width * 0.29,
                 child: 2 != currentPage
                     ? OnboardingMoveText(
                         text: "     Next     ",
