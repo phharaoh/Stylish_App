@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:stylish_app/core/app_route.dart';
 import 'package:stylish_app/core/styles/colors.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
