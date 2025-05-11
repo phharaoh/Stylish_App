@@ -80,7 +80,7 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: lib\core\assets\fonts\Montserrat-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+        - asset: lib\core\assets\fonts\Montserrat-ExtraBold.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
