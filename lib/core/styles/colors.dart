@@ -1,8 +1,9 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 abstract class AppColors {
   static const Color primary = Color(0xFFF83758);
   static const Color primaryVariant = Color(0xFFFFCCD5);
+  static const Color white = Colors.white;
   static const Color textFieldBackground = Color(0xFFF3F3F3);
   static const Color textFieldIcon = Color(0xFF626262);
   static const Color textFieldLabelText = Color(0xFF676767);

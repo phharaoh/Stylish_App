@@ -29,4 +29,10 @@ abstract class TextStyles {
     fontSize: 40,
     fontWeight: FontWeight.w900,
   );
+  static const TextStyle descriptionAuth = TextStyle(
+    fontFamily: FontWeightStyles.extraBold,
+    color: Colors.black,
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+  );
 }

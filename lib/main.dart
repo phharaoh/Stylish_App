@@ -16,8 +16,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: const GetStartView(),
       debugShowCheckedModeBanner: false,
+
       // onGenerateRoute: AppRoute().generateRoute,
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: AppColors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(color: AppColors.primary),
+        ),
+        scaffoldBackgroundColor: AppColors.white,
         fontFamily: 'Montserrat',
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
         useMaterial3: true,

@@ -1,4 +1,5 @@
 import '../Sign/signin_view.dart';
+import '../Sign/signup_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/styles/colors.dart';
 import '../../../../core/styles/text_styles.dart';
@@ -63,7 +64,10 @@ class GetStartView extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * .71,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        MyNavigator.goTo(
+                            context: context, screen: const SignUpView());
+                      },
                       style: ElevatedButton.styleFrom(
                         side: const BorderSide(
                           color: AppColors.primary,
