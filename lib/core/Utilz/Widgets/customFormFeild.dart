@@ -10,8 +10,10 @@ class Customformfeild extends StatelessWidget {
       this.validator,
       this.controller,
       this.prefixIcon,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.visiable});
   final String hintText;
+  final bool? visiable;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
   final Widget? prefixIcon;
@@ -25,6 +27,7 @@ class Customformfeild extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 8.0),
         child: TextFormField(
           controller: controller,
+          obscureText: visiable ?? false,
           validator: validator,
           decoration: InputDecoration(
             filled: true,

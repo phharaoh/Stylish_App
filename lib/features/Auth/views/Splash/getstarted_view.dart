@@ -1,5 +1,5 @@
-import '../Sign/signin_view.dart';
-import '../Sign/signup_view.dart';
+import '../signin_view.dart';
+import '../signup_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/styles/colors.dart';
 import '../../../../core/styles/text_styles.dart';
@@ -48,7 +48,7 @@ class GetStartView extends StatelessWidget {
                   child: ElevatedButton(
                       onPressed: () {
                         MyNavigator.goTo(
-                            context: context, screen: const SigninView());
+                            context: context, screen: const LoginView());
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primary,
@@ -66,7 +66,7 @@ class GetStartView extends StatelessWidget {
                   child: ElevatedButton(
                       onPressed: () {
                         MyNavigator.goTo(
-                            context: context, screen: const SignUpView());
+                            context: context, screen: const RegisterView());
                       },
                       style: ElevatedButton.styleFrom(
                         side: const BorderSide(
