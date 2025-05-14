@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:stylish_app/core/app_route.dart';
+import 'features/Profile/Views/profile_view.dart';
 import 'package:stylish_app/core/styles/colors.dart';
 import 'package:stylish_app/features/Auth/views/Splash/getstarted_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const GetStartView(),
+      home: const ProfileView(),
       debugShowCheckedModeBanner: false,
 
       // onGenerateRoute: AppRoute().generateRoute,
