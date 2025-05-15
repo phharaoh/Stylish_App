@@ -54,4 +54,14 @@ abstract class TextStyles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle searchText = TextStyle(
+    color:Color(0xFFBBBBBB) ,
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
+  static const TextStyle allFeature = TextStyle(
+    color:Colors.black ,
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
 }
