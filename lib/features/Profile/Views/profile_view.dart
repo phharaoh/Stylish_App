@@ -6,6 +6,7 @@ import '../Widget/profile_choices_widget.dart';
 import 'package:stylish_app/core/styles/colors.dart';
 import '../../Auth/views/Splash/getstarted_view.dart';
 import '../../../core/Utilz/Localization/en_keys.dart';
+import 'package:stylish_app/features/Home/Widget/float_action_button.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -20,7 +21,7 @@ class ProfileView extends StatelessWidget {
       ),
       body: Center(
           child: Padding(
-        padding: const EdgeInsets.only(left :23,right:23),
+        padding: const EdgeInsets.only(left: 23, right: 23),
         child: Column(
           children: [
             const CircleAvatar(
@@ -31,13 +32,13 @@ class ProfileView extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Text(EnKeys.userFullProfile,style: TextStyles.username),
-             const SizedBox(
+            const Text(EnKeys.userFullProfile, style: TextStyles.username),
+            const SizedBox(
               height: 10,
             ),
             ProChoices(
                 txt: EnKeys.myprofile,
-                imagePath: 'lib/core/assets/images/Profile - Iconly Pro.svg',
+                imagePath: 'lib/core/assets/images/Profile.svg',
                 screen: const MyProView(),
                 context: context),
             ProChoices(
@@ -66,6 +67,7 @@ class ProfileView extends StatelessWidget {
           ],
         ),
       )),
+      floatingActionButton: FloatActionButt(onPress: () {}),
     ));
   }
 }

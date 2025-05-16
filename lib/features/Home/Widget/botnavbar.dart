@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:stylish_app/core/styles/colors.dart';
 import 'package:stylish_app/features/Profile/Views/profile_view.dart';
 
-class HomeNavBar extends StatefulWidget {
-  const HomeNavBar({super.key});
+class HomeRoute extends StatefulWidget {
+  const HomeRoute({super.key});
 
   @override
-  State<HomeNavBar> createState() => _HomeNavBarState();
+  State<HomeRoute> createState() => _HomeRouteState();
 }
 
-class _HomeNavBarState extends State<HomeNavBar> {
+class _HomeRouteState extends State<HomeRoute> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [

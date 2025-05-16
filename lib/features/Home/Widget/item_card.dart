@@ -16,13 +16,9 @@ class ItemCard extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Container(
-              height: MediaQuery.of(context).size.height * .23,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
-              child: Image.asset(
-                'lib/core/assets/images/item.png',
-                fit: BoxFit.cover,
-              ),
+            Image.asset(
+              'lib/core/assets/images/item.png',
+              fit: BoxFit.cover,
             ),
             const Text(
               'Mens Starry',
