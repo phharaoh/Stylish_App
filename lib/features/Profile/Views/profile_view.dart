@@ -1,6 +1,7 @@
 import 'setting_view.dart';
 import 'myprofile_view.dart';
 import 'package:flutter/material.dart';
+import '../../Home/Views/favourite_view.dart';
 import '../../../core/styles/text_styles.dart';
 import '../Widget/profile_choices_widget.dart';
 import 'package:stylish_app/core/styles/colors.dart';
@@ -49,7 +50,7 @@ class ProfileView extends StatelessWidget {
             ProChoices(
                 txt: EnKeys.myfavortes,
                 imagePath: 'lib/core/assets/images/Heart - Iconly Pro.svg',
-                screen: const ProfileView(),
+                screen: const FavouriteView(),
                 context: context),
             ProChoices(
                 txt: EnKeys.setting,

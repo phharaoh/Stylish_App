@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import '../Widget/float_action_button.dart';
 import 'package:stylish_app/core/styles/colors.dart';
 import 'package:stylish_app/core/styles/text_styles.dart';
+import 'package:stylish_app/core/Utilz/Helper/myNavigator.dart';
+import 'package:stylish_app/features/Home/Views/search_view.dart';
+
+
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -28,7 +32,9 @@ class HomeView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      MyNavigator.goTo(context: context, screen: const SearchView());
+                    },
                     child: Container(
                       width: double.infinity,
                       height: 40,
@@ -151,8 +157,7 @@ class HomeView extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatActionButt(
-          onPress: (){},
-          
+          onPress: () {},
         ),
       ),
     );
