@@ -12,4 +12,16 @@ abstract class MyNavigator {
       ),
     );
   }
+
+  static goToAndReplace({
+    required BuildContext context,
+    required Widget screen,
+  }) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => screen,
+      ),
+    );
+  }
 }

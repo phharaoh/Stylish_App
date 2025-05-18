@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'features/Home/Widget/botnavbar.dart';
 import 'package:stylish_app/core/app_route.dart';
 import 'package:stylish_app/core/styles/colors.dart';
-import 'features/Auth/views/Splash/getstarted_view.dart';
+import 'package:stylish_app/features/Home/Widget/botnavbar.dart';
 
 void main() {
   runApp(const MyApp());

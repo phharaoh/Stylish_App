@@ -1,7 +1,7 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import '../../../core/styles/text_styles.dart';
-
+import 'package:stylish_app/core/Utilz/Helper/my_navigator.dart';
 
 class ProChoices extends StatelessWidget {
   const ProChoices(
@@ -18,9 +18,10 @@ class ProChoices extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => screen,
-        ));
+        MyNavigator.goTo(
+          context: context,
+          screen: screen,
+        );
       },
       child: Container(
         width: double.infinity,
@@ -32,7 +33,8 @@ class ProChoices extends StatelessWidget {
               SvgPicture.asset(imagePath),
               const SizedBox(width: 13),
               Text(
-                txt,style: TextStyles.choicetxt,
+                txt,
+                style: TextStyles.choicetxt,
               ),
               Expanded(
                 child: Row(

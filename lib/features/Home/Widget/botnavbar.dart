@@ -25,6 +25,8 @@ class _HomeRouteState extends State<HomeRoute> {
     return Scaffold(
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 20,
+        elevation: 10,
         backgroundColor: AppColors.white,
         items: const [
           BottomNavigationBarItem(

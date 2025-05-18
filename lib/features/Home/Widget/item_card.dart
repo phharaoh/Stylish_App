@@ -3,8 +3,8 @@ import '../../../core/styles/colors.dart';
 import '../../../core/Utilz/Helper/my_navigator.dart';
 import 'package:stylish_app/features/Home/Views/product_view.dart';
 
-class ItemCard extends StatelessWidget {
-  const ItemCard({super.key});
+class ItemContainer extends StatelessWidget {
+  const ItemContainer({super.key});
 
   @override
   Widget build(BuildContext context) {

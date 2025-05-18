@@ -134,14 +134,14 @@ class HomeView extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ItemCard(),
-                          ItemCard(),
+                          ItemContainer(),
+                          ItemContainer(),
                         ],
                       ),
                       Row(
                         children: [
-                          ItemCard(),
-                          ItemCard(),
+                          ItemContainer(),
+                          ItemContainer(),
                         ],
                       ),
                     ],

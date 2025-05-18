@@ -1,6 +1,7 @@
 import 'setting_view.dart';
 import 'myprofile_view.dart';
 import 'package:flutter/material.dart';
+import '../../orders/Views/order_route.dart';
 import '../../Home/Views/favourite_view.dart';
 import '../../../core/styles/text_styles.dart';
 import '../Widget/profile_choices_widget.dart';
@@ -17,7 +18,10 @@ class ProfileView extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: const Text('Profile',style: TextStyles.appbarTitle,),
+        title: const Text(
+          'Profile',
+          style: TextStyles.appbarTitle,
+        ),
         centerTitle: true,
       ),
       body: Center(
@@ -45,7 +49,7 @@ class ProfileView extends StatelessWidget {
             ProChoices(
                 txt: EnKeys.myorder,
                 imagePath: 'lib/core/assets/images/orderIcon.svg',
-                screen: const ProfileView(),
+                screen: const OrderRoute(),
                 context: context),
             ProChoices(
                 txt: EnKeys.myfavortes,

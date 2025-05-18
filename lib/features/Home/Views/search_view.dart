@@ -14,10 +14,8 @@ class SearchView extends StatelessWidget {
         ),
         body: Padding(
             padding: const EdgeInsets.only(left: 17.0, right: 17.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              
-              children: [
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Container(
                 width: double.infinity,
                 height: 40,
@@ -63,8 +61,8 @@ class SearchView extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    ItemCard(),
-                    ItemCard(),
+                    ItemContainer(),
+                    ItemContainer(),
                   ],
                 ),
               ),
