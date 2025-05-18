@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import '../../Home/Widget/botnavbar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../Manager/login_cubit/login_cubit.dart';
 import '../Manager/login_cubit/login_state.dart';
 import 'package:stylish_app/core/styles/colors.dart';
+import '../../../core/Utilz/Helper/my_navigator.dart';
 import 'package:stylish_app/core/styles/text_styles.dart';
 import '../../../../core/Utilz/Widgets/customFormFeild.dart';
 import '../../../../core/Utilz/Widgets/custom_elevatedButton.dart';
@@ -78,14 +80,38 @@ class LoginView extends StatelessWidget {
                       const SizedBox(
                         height: 50,
                       ),
-                      CustomElvButt(
-                        onPressed: () {
-                          LoginCubit.get(context)
-                              .formKey
-                              .currentState!
-                              .validate();
+                      BlocConsumer<LoginCubit, LoginState>(
+                        listener: (context, state) {
+                          if (state is LoginSuccessState) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Login Successfully'),
+                              ),
+                            );
+                            MyNavigator.goTo(
+                                context: context, screen: const HomeRoute());
+                          } else if (state is LoginErrorState) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(state.error),
+                              ),
+                            );
+                          }
                         },
-                        text: "Login",
+                        builder: (context, state) {
+                          if (state is LoginLoadingState) {
+                            return const Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          } else {
+                            return CustomElvButt(
+                              onPressed: () {
+                                LoginCubit.get(context).onLogin(context);
+                              },
+                              text: "Login",
+                            );
+                          }
+                        },
                       )
                     ],
                   ),

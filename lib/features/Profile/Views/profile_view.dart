@@ -17,7 +17,7 @@ class ProfileView extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: const Text('Profile',style: TextStyles.appbarTitle,),
         centerTitle: true,
       ),
       body: Center(

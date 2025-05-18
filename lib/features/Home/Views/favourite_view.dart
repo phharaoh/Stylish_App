@@ -1,5 +1,6 @@
 import '../Widget/item_card.dart';
 import 'package:flutter/material.dart';
+import '../../../core/styles/text_styles.dart';
 
 class FavouriteView extends StatelessWidget {
   const FavouriteView({super.key});
@@ -8,30 +9,14 @@ class FavouriteView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My Favourite'),
+        title: const Text(
+          'My Favourite',
+          style: TextStyles.appbarTitle,
+        ),
       ),
       body: const SingleChildScrollView(
         child: Column(
-          children: [
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      ItemCard(),
-                      ItemCard(),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      ItemCard(),
-                    ],
-                  ),
-                ],
-              ),
-            )
-          ],
+          children: [],
         ),
       ),
     );

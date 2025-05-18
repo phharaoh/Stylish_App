@@ -3,11 +3,9 @@ import '../Widget/circleAvtar.dart';
 import 'package:flutter/material.dart';
 import '../Widget/float_action_button.dart';
 import 'package:stylish_app/core/styles/colors.dart';
+import '../../../core/Utilz/Helper/my_navigator.dart';
 import 'package:stylish_app/core/styles/text_styles.dart';
-import 'package:stylish_app/core/Utilz/Helper/myNavigator.dart';
 import 'package:stylish_app/features/Home/Views/search_view.dart';
-
-
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -25,15 +23,12 @@ class HomeView extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                // Image.asset('lib/core/assets/images/logoipsum-255 1.png'),
-                // const SizedBox(
-                //   height: 10,
-                // ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                     onTap: () {
-                      MyNavigator.goTo(context: context, screen: const SearchView());
+                      MyNavigator.goTo(
+                          context: context, screen: const SearchView());
                     },
                     child: Container(
                       width: double.infinity,

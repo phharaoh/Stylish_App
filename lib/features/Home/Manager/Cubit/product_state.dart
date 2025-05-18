@@ -5,7 +5,7 @@ sealed class CounterState {
 }
 
 class CounterInitState extends CounterState {
-  CounterInitState() : super(0);
+  CounterInitState() : super(1);
 }
 
 class CounterUpdateState extends CounterState {

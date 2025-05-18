@@ -3,7 +3,7 @@ import '../signup_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/styles/colors.dart';
 import '../../../../core/styles/text_styles.dart';
-import '../../../../core/Utilz/Helper/myNavigator.dart';
+import '../../../../core/Utilz/Helper/my_navigator.dart';
 
 class GetStartView extends StatelessWidget {
   const GetStartView({super.key});
@@ -92,6 +92,7 @@ class GetStartView extends StatelessWidget {
           )),
         ),
       ]),
+    
     );
   }
 }

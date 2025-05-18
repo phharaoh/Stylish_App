@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../core/styles/colors.dart';
+import '../../../core/styles/text_styles.dart';
 import '../../../core/Utilz/Widgets/customFormFeild.dart';
 import 'package:stylish_app/core/Utilz/Widgets/custom_curvedButton.dart';
+
 
 class MyProView extends StatelessWidget {
   const MyProView({super.key});
@@ -11,7 +13,7 @@ class MyProView extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar:AppBar(
-        title: const Text('Profile'),
+        title: const Text('Profile',style: TextStyles.appbarTitle,),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

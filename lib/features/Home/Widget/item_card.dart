@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/styles/colors.dart';
-import 'package:stylish_app/core/Utilz/Helper/myNavigator.dart';
+import '../../../core/Utilz/Helper/my_navigator.dart';
 import 'package:stylish_app/features/Home/Views/product_view.dart';
 
 class ItemCard extends StatelessWidget {

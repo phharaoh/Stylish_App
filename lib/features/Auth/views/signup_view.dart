@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import '../../Home/Widget/botnavbar.dart';
 import '../../../../core/styles/colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/styles/text_styles.dart';
+import '../../../core/Utilz/Helper/my_navigator.dart';
 import '../Manager/Register_cubit/register_cubit.dart';
 import '../Manager/Register_cubit/register_state.dart';
 import '../../../core/Utilz/Widgets/customFormFeild.dart';
@@ -132,14 +134,39 @@ class RegisterView extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      CustomElvButt(
-                        onPressed: () {
-                          RegisterCubit.get(context)
-                              .formKey
-                              .currentState!
-                              .validate();
+                      BlocConsumer<RegisterCubit, RegisterState>(
+                        listener: (context, state) {
+                          if (state is RegisterSuccessState) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Register Successfully'),
+                              ),
+                            );
+                            MyNavigator.goTo(
+                                context: context, screen: const HomeRoute());
+                          }
+                          if (state is RegisterErrorState) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(state.error),
+                              ),
+                            );
+                          }
                         },
-                        text: "Create Account",
+                        builder: (context, state) {
+                          if (state is RegisterLoadingState) {
+                            return const Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          } else {
+                            return CustomElvButt(
+                              onPressed: () {
+                                RegisterCubit.get(context).onRegister(context);
+                              },
+                              text: "Create Account",
+                            );
+                          }
+                        },
                       )
                     ],
                   ),

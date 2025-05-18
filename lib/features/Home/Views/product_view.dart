@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../Widget/operational_icon.dart';
 import '../Manager/Cubit/product_state.dart';
 import '../Manager/Cubit/product_cubit.dart';
+import '../Widget/increse_decrese_button.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stylish_app/core/styles/colors.dart';
 import '../../../core/Utilz/Widgets/custom_curvedButton.dart';
@@ -47,9 +48,10 @@ class ProductView extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    const Text(
-                      '100 \$',
-                      style: TextStyle(color: AppColors.primary, fontSize: 20),
+                    Text(
+                      '${context.read<CounterCubit>().price} \$',
+                      style: const TextStyle(
+                          color: AppColors.primary, fontSize: 20),
                     ),
                     const Spacer(),
                     Padding(
@@ -57,18 +59,18 @@ class ProductView extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          IconsButt(
-                            onpress: () {
+                          OperatedButton(
+                            onTap: () {
                               context.read<CounterCubit>().decrement();
                             },
                             color: AppColors.primaryVariant,
-                            icon: Icons.minimize_sharp,
+                            icon: Icons.remove,
                           ),
                           Text(
                             state.count.toString(),
                           ),
-                          IconsButt(
-                            onpress: () {
+                          OperatedButton(
+                            onTap: () {
                               context.read<CounterCubit>().increment();
                             },
                             color: AppColors.primary,
