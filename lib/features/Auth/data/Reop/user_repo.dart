@@ -12,9 +12,8 @@ class UserRepo {
       await apiHelper.postRequest(
         endPoint: ApiPaths.register,
         data: {
-          "username": user.name,
+          "name": user.name,
           "password": user.password,
-          "confpassword": user.confirmPassword,
           "phone": user.phone,
           "email": user.email,
         },
@@ -37,7 +36,7 @@ class UserRepo {
         if (user!.name == name && user!.password == password) {
           await Future.delayed(const Duration(seconds: 2));
           apiHelper.postRequest(endPoint: ApiPaths.login, data: {
-            "username": name,
+            "email": name,
             "password": password,
           });
           return const Right(null);
