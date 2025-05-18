@@ -12,9 +12,8 @@ class UserRepo {
       await apiHelper.postRequest(
         endPoint: ApiPaths.register,
         data: {
-          "username": user.name,
+          "name": user.name,
           "password": user.password,
-          "confpassword": user.confirmPassword,
           "phone": user.phone,
           "email": user.email,
         },
