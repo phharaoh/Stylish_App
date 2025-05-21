@@ -3,6 +3,7 @@ import '../Widget/circleAvtar.dart';
 import 'package:flutter/material.dart';
 import '../Widget/float_action_button.dart';
 import 'package:stylish_app/core/styles/colors.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import '../../../core/Utilz/Helper/my_navigator.dart';
 import 'package:stylish_app/core/styles/text_styles.dart';
 import 'package:stylish_app/features/Home/Views/search_view.dart';
@@ -107,19 +108,29 @@ class HomeView extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    width: double.infinity,
+                CarouselSlider(
+                  options: CarouselOptions(
                     height: MediaQuery.of(context).size.height * .25,
-                    child: Image.asset(
-                      'lib/core/assets/images/homeoffer.png',
-                      fit: BoxFit.fill,
-                    ),
+                    enlargeCenterPage: true,
+                    autoPlay: true,
                   ),
+                  items: [
+                    'lib/core/assets/images/homeoffer.png',
+                  ].map((imagePath) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      width: double.infinity,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.asset(
+                          imagePath,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    );
+                  }).toList(),
                 ),
                 const SizedBox(
                   height: 20,

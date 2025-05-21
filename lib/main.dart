@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:stylish_app/core/styles/colors.dart';
 import 'package:stylish_app/features/Home/Widget/botnavbar.dart';
 
-// import 'package:stylish_app/core/app_route.dart';
-
 void main() {
   runApp(const MyApp());
 }

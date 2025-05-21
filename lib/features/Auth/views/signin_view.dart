@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../Manager/login_cubit/login_cubit.dart';
 import '../Manager/login_cubit/login_state.dart';
 import 'package:stylish_app/core/styles/colors.dart';
+import '../../../core/Utilz/Widgets/custom_form.dart';
 import '../../../core/Utilz/Helper/my_navigator.dart';
 import 'package:stylish_app/core/styles/text_styles.dart';
-import '../../../../core/Utilz/Widgets/customFormFeild.dart';
 import '../../../../core/Utilz/Widgets/custom_elevatedButton.dart';
 
 class LoginView extends StatelessWidget {

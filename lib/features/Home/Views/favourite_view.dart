@@ -1,4 +1,3 @@
-import '../Widget/item_card.dart';
 import 'package:flutter/material.dart';
 import '../../../core/styles/text_styles.dart';
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../Widget/operational_icon.dart';
 import '../Manager/Cubit/product_state.dart';
 import '../Manager/Cubit/product_cubit.dart';
 import '../Widget/increse_decrese_button.dart';

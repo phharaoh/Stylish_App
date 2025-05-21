@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../core/styles/colors.dart';
 import '../../../core/styles/text_styles.dart';
-import '../../../core/Utilz/Widgets/customFormFeild.dart';
+import '../../../core/Utilz/Widgets/custom_form.dart';
 import 'package:stylish_app/core/Utilz/Widgets/custom_curvedButton.dart';
 
 

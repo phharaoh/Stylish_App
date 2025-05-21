@@ -3,10 +3,10 @@ import '../../Home/Widget/botnavbar.dart';
 import '../../../../core/styles/colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/styles/text_styles.dart';
+import '../../../core/Utilz/Widgets/custom_form.dart';
 import '../../../core/Utilz/Helper/my_navigator.dart';
 import '../Manager/Register_cubit/register_cubit.dart';
 import '../Manager/Register_cubit/register_state.dart';
-import '../../../core/Utilz/Widgets/customFormFeild.dart';
 import '../../../../core/Utilz/Widgets/custom_elevatedButton.dart';
 
 class RegisterView extends StatelessWidget {
