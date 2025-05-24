@@ -1,6 +1,6 @@
+import 'core/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:stylish_app/core/styles/colors.dart';
-import 'package:stylish_app/features/Home/Widget/botnavbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomeRoute(),
-      // debugShowCheckedModeBanner: false,
-      // onGenerateRoute: AppRoute().generateRoute,
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: AppRoute().generateRoute,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           centerTitle: true,
